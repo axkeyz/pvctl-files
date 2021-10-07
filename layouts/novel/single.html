@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+{{ partial "head.html" . }}
+
+<body>
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        {{ partial "banner.html" . }}
+        <div class="home">
+            <div class="logo">
+                <h1><a href="/">{{.Site.Title}}</a></h1>
+            </div>
+            {{ partial "nav.html" . }}
+            <div>
+                <article>
+                    <h3>{{ .Title }}</h3>
+                    <div class="less">
+                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Using {{ .WordCount }} words
+                    </div>
+                    <div class="em">{{ .Content | safeHTML }}</div>
+                    <br />
+                    {{ $slug := .Params.slug }}
+                    {{ if isset .Params "categories" -}}
+                    <div class="less">Novel: 
+                        {{ range $index, $name := sort .Params.categories -}}
+                            <a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
+                        {{- end}}
+                    </div>
+                    {{- end }}
+                    {{ if isset .Params "tags" -}}
+                        <div class="less">Tags: 
+                        {{ range $index, $name := sort .Params.tags -}}
+                            <a class="pagelink" href='{{ (printf "/tags/%s/" $name) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
+                        {{- end}}
+                        </div>
+                    {{- end }}
+                    <div class="line-dotted"></div>
+                <article>
+            </div>
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "banner.html" . }}
+    </div>
+
+
+  {{ partial "foot.html" . }}
+</body>
+</html>

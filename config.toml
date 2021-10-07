@@ -1,0 +1,28 @@
+baseURL = "http://example.org/"
+languageCode = "en-nz"
+title = "PVC TL"
+
+theme = "niello"
+
+[permalinks]
+    novel = "/novel/:slug/:filename"
+    pages = "/:filename"
+
+[params]
+    keywords = ""
+    description = ""
+    copyright = "&#xA9; 2021 PVC TL"
+    google_ad_client = "ca-pub-******"
+    ga = "UA-******"
+    sharethis = ""
+
+[menu]
+    [[menu.niello]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+    [[menu.niello]]
+    name = "About/Contact"
+    url = "/about/"
+    weight = 2
