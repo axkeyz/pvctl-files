@@ -2,6 +2,7 @@
 <html class="no-js" lang="">
 
 {{ partial "head.html" . }}
+{{ $slug := .Params.slug }}
 
 <body>
     {{ `<!--[if lte IE 9]>
@@ -18,19 +19,23 @@
             {{ partial "nav.html" . }}
             <div>
                 <article>
-                    <h3>{{ .Title }}</h3>
-                    <div class="less">
-                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Using {{ .WordCount }} words
-                    </div>
+                    <div class="less flex-column">
+                        {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}
+                        &nbsp;&nbsp;<a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}'>TOC</a>&nbsp;&nbsp;
+                        {{ if .NextInSection }}|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{.NextInSection.Permalink}}">Next</a>{{ end }}
+                    </div><br />
+                    <h3>{{ .Title }}{{if .Params.subtitle}}: {{ .Params.subtitle }}{{end}}</h3>                    
                     <div class="em">{{ .Content | safeHTML }}</div>
                     <br />
-                    {{ $slug := .Params.slug }}
                     <div class="less flex-column">
                         {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}
                         &nbsp;&nbsp;<a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}'>TOC</a>&nbsp;&nbsp;
                         {{ if .NextInSection }}|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{.NextInSection.Permalink}}">Next</a>{{ end }}
                     </div>
-                    <br />
+                    <br /><br />
+                    <div class="less">
+                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Word Count: {{ .WordCount }}
+                    </div>
                     {{ if isset .Params "categories" -}}
                     <div class="less">Novel: 
                         {{ range $index, $name := sort .Params.categories -}}
