@@ -25,6 +25,12 @@
                     <div class="em">{{ .Content | safeHTML }}</div>
                     <br />
                     {{ $slug := .Params.slug }}
+                    <div class="less flex-column">
+                        {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}
+                        &nbsp;&nbsp;<a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}'>TOC</a>&nbsp;&nbsp;
+                        {{ if .NextInSection }}|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{.NextInSection.Permalink}}">Next</a>{{ end }}
+                    </div>
+                    <br />
                     {{ if isset .Params "categories" -}}
                     <div class="less">Novel: 
                         {{ range $index, $name := sort .Params.categories -}}

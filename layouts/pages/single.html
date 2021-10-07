@@ -19,13 +19,8 @@
             <div>
                 <article>
                     <h3>{{ .Title }}</h3>
-                    <div class="less">
-                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Using {{ .WordCount }} words
-                    </div>
                     <div class="em">{{ .Content | safeHTML }}</div>
                     <br />
-                    <br />
-                    <div class="less">Page link: <a href="{{ .RelPermalink }}" class="pagelink">{{ .RelPermalink }}</a></div>
                     <div class="line-dotted"></div>
                 <article>
             </div>

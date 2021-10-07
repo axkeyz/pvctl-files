@@ -9,12 +9,11 @@ theme = "niello"
     pages = "/:filename"
 
 [params]
-    keywords = ""
-    description = ""
+    keywords = "novels, bl, chinese translation"
+    description = "Chinese BL novel translations, primarily involving the protagonist, villain and cannon fodder (PVC)"
     copyright = "&#xA9; 2021 PVC TL"
     google_ad_client = "ca-pub-******"
     ga = "UA-******"
-    sharethis = ""
 
 [menu]
     [[menu.niello]]
@@ -23,6 +22,6 @@ theme = "niello"
     weight = 1
 
     [[menu.niello]]
-    name = "About/Contact"
+    name = "About"
     url = "/about/"
     weight = 2

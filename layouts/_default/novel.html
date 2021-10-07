@@ -13,25 +13,20 @@
         {{ partial "banner.html" . }}
         <div class="home">
             <div class="logo">
-                <h1><a href="/">{{.Title}}</a></h1>
+                <h1><a href="/">{{.Site.Title}}</a></h1>
             </div>
             {{ partial "nav.html" . }}
             <div>
-            {{ $pages := where site.RegularPages "Type" "in" "novel" }}
-            {{ range (.Paginate $pages).Pages }}
-                <article>
-                    <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a></h3>
-                    <div class="less">
-                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read
-                    </div>
-                    <div class="em">{{ .Summary }}</div>
-                    {{ if .Truncated }}
-                    <small><a href="{{ .RelPermalink }}">Read More &gt;&gt;</a></small>
-                    {{ else }}
-                    <small><a href="javascript:;"></a></small>
-                    {{ end }}
-                <article>
-            {{ end }}
+                {{ if .RegularPages }}
+                <h2>{{ .Title }} - Table of Contents</h2>
+                {{ range .RegularPages.ByTitle }}
+                    <h3><a href="{{ .RelPermalink }}">CHAPTER {{ .File.BaseFileName }}
+                        {{ if .Params.subtitle }}
+                            : {{ .Params.subtitle }}
+                        {{ end }}
+                    </a></h3>
+                {{ end }}
+                {{ end }}
             </div>
             <div class="pages">
                 {{ if .Paginator.HasPrev }}
