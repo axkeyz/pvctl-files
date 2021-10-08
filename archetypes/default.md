@@ -5,7 +5,7 @@ date: {{ .Date }}
 draft: false
 
 slug: "{{ .Name }}"
-categories: [] 
+category: ""
 tags: ["bl"]
 
 translator:

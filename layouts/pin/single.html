@@ -24,8 +24,12 @@
                     </div>
                     <div class="em">{{ .Content | safeHTML }}</div>
                     <br />
+
+                    <div class="less">
+                        <a class="pagelink" href='/pin' title="Pinned Announcements">Previously pinned announcements</a>
+                    </div>
                     <div class="line-dotted"></div>
-                <article>
+                </article>
             </div>
             {{ partial "footer.html" . }}
         </div>

@@ -13,21 +13,12 @@
         {{ partial "banner.html" . }}
         <div class="home">
             <div class="logo">
-                <h1><a href="/">{{.Title}}</a></h1>
+                <h1><a href="/">{{.Site.Title}}</a></h1>
             </div>
             {{ partial "nav.html" . }}
             <div>
-                <h2><a class="green-link" href="/pin">Announcements</a></h2>
-                {{ range first 3 (where site.RegularPages "Type" "in" "pin") }}
-                    <article>
-                        <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }} -  {{ .PublishDate.Format "02/01/2006" }}</a></h3>
-                        <div class="em"><p>{{ .Summary }}</p></div>
-                    </article>
-                {{ end }}
-                <div class="line-dotted"></div>
-                <h2>Latest Updates</h2>
-                {{ $pages := where site.RegularPages "Type" "in" "novel" }}
-                {{ range (.Paginate $pages 5).Pages }}
+                {{ $pages := where site.RegularPages "Type" "in" "pin" }}
+                {{ range (.Paginate $pages 20).Pages }}
                     <article>
                         <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a></h3>
                         <div class="em">{{ .Summary }}</div>
@@ -37,15 +28,7 @@
                     </article>
                 {{ end }}
             </div>
-            <div class="pages">
-                {{ if .Paginator.HasPrev }}
-                <a href="{{ .Paginator.Prev.URL }}">&lt;&lt; Previous </a>&nbsp;|&nbsp;
-                {{ end }}
-                Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }} 
-                {{ if .Paginator.HasNext }}&nbsp;|&nbsp;
-                <a href="{{ .Paginator.Next.URL }}">Next &gt;&gt;</a>
-                {{ end }}
-            </div>
+            <br>
             <div class="line-dotted"></div>
             {{ partial "footer.html" . }}
         </div>

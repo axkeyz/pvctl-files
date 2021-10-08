@@ -5,13 +5,7 @@
         {{ range sort .Site.Menus.niello "Weight" "asc" }}
         <a href="{{ .URL }}" class="{{ if eq $currentPage .URL }} {{ $inNav = 1 }}current{{ end}}">{{ .Name }}</a>
         {{ end }}
-        {{ if eq $inNav 0 }}
-        <a href="javascript:void(0);" class="current">Article</a>
-        {{ end }}
     {{ else if eq .IsHome true }}
     <a href="/" class="current">HOME</a>
-    {{ else }}
-    <a href="/" class="">HOME</a>
-    <a href="javascript:void(0);" class="current">Article</a>
     {{ end }}
 </div>

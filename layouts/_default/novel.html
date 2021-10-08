@@ -27,37 +27,64 @@
 
                     {{ if .Params.original }}
                     {{- $param := $.Params.original -}}
-                    {{ range $param }}
-                        {{ range $key, $value := . }}
-                        <p><span class="green">{{ title  $key }}:</span> {{ $value }}</p>
+                        {{ range $param }}
+                            {{ range $key, $value := . }}
+                            <p><span class="green">{{ title  $key }}:</span> {{ $value }}</p>
+                            {{ end }}
                         {{ end }}
                     {{ end }}
-                    {{ end }}
-
                     <h3>Contents</h3>
                     {{ range .RegularPages.ByTitle }}
-                        <a class="green-link" href="{{ .RelPermalink }}">CHAPTER {{ .File.BaseFileName }}
+                        <a class="green-link" href="{{ .RelPermalink }}">&#10132; Chapter {{ .File.BaseFileName }}
                             {{ if .Params.subtitle }}
                                 : {{ .Params.subtitle }}
                             {{ end }}
-                        </a><br />
+                        </a><br/>
                     {{ end }}
-
-                    {{ $slug := .Params.slug }}<br />
-                    {{ if isset .Params "categories" -}}
-                    <div class="less">Novel: 
-                        {{ range $index, $name := sort .Params.categories -}}
-                            <a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
+                    {{ if isset .Params "notes" -}}
+                        <br/><h3>Notes</h3>
+                        <ul>{{ range $index, $name := sort .Params.notes -}}
+                            {{ range $key, $value := . }}
+                                {{ if eq $key "warnings"}}
+                                    <li><span class="green">Warnings</span><ul>
+                                    {{ range . }}
+                                        {{ range $warning_k, $warning_v := .}}
+                                        <li>{{ title  $warning_k }}: {{ $warning_v }}</li>
+                                        {{ end }}
+                                    {{ end }}
+                                    </ul></li>
+                                {{ else }}
+                                <li><span class="green">{{ title  $key }}:</span> {{ $value }}</li>
+                                {{ end }}
+                            {{ end }}
                         {{- end}}
-                    </div>
-                    {{- end }}
+                        </ul>
+                    {{ end }}
                     {{ if isset .Params "tags" -}}
-                        <div class="less">Tags: 
+                        <br/><div class="less">Tags: 
                         {{ range $index, $name := sort .Params.tags -}}
                             <a class="pagelink" href='{{ (printf "/tags/%s/" $name) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
                         {{- end}}
                         </div>
                     {{- end }}
+                {{ else }}
+                    <h2 class="green">List of All Novels</h2>
+                    {{ if in .Permalink "novel" }}
+                        {{- range .Pages -}}
+                            <article>
+                                <a class="green-link" href="/novel/{{.Params.slug}}">&#10132; {{ .Title }}</a>
+                                <p>{{ .Params.Summary }}
+                                    {{ if isset .Params "tags" -}}
+                                        <div class="less flex-left">Tags: &nbsp;
+                                        {{ range $index, $name := sort .Params.tags -}}
+                                            <a class="pagelink" href='{{ (printf "/tags/%s/" $name) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
+                                        {{- end}}
+                                        </div>
+                                    {{- end }}
+                                </p>
+                            </article>
+                        {{- end -}}
+                    {{- end -}}
                 {{ end }}
             </div>
             <br>
