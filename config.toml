@@ -4,9 +4,18 @@ title = "PVC TL"
 
 theme = "niello"
 
+[taxonomies]
+    tag = 'tags'
+    translator = 'translator'
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
 [permalinks]
     novel = "/novel/:slug/:filename"
-    pages = "/:filename"
+    page = "/:filename"
 
 [params]
     keywords = "novels, bl, chinese translation"
@@ -22,6 +31,11 @@ theme = "niello"
     weight = 1
 
     [[menu.niello]]
+    name = "Novels"
+    url = "/novel/"
+    weight = 2
+
+    [[menu.niello]]
     name = "About"
     url = "/about/"
-    weight = 2
+    weight = 3
