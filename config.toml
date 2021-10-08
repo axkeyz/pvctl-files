@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "https://pvc-tl.netlify.app/"
 languageCode = "en-nz"
-title = "PVC TL"
+title = "PVC-TL"
 
 theme = "niello"
 

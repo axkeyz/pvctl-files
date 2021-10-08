@@ -1,58 +1,58 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tag on PVC TL</title>
-    <link>http://example.org/tags/</link>
-    <description>Recent content in Tag on PVC TL</description>
+    <title>Tag on PVC-TL</title>
+    <link>https://pvc-tl.netlify.app/tags/</link>
+    <description>Recent content in Tag on PVC-TL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
     <lastBuildDate>Fri, 08 Oct 2021 00:28:18 +1300</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pvc-tl.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>bl</title>
-      <link>http://example.org/tags/bl/</link>
+      <link>https://pvc-tl.netlify.app/tags/bl/</link>
       <pubDate>Fri, 08 Oct 2021 00:28:18 +1300</pubDate>
       
-      <guid>http://example.org/tags/bl/</guid>
+      <guid>https://pvc-tl.netlify.app/tags/bl/</guid>
       <description></description>
     </item>
     
     <item>
       <title>cannon fodder mc</title>
-      <link>http://example.org/tags/cannon-fodder-mc/</link>
+      <link>https://pvc-tl.netlify.app/tags/cannon-fodder-mc/</link>
       <pubDate>Fri, 08 Oct 2021 00:28:18 +1300</pubDate>
       
-      <guid>http://example.org/tags/cannon-fodder-mc/</guid>
+      <guid>https://pvc-tl.netlify.app/tags/cannon-fodder-mc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>protagonist ml</title>
-      <link>http://example.org/tags/protagonist-ml/</link>
+      <link>https://pvc-tl.netlify.app/tags/protagonist-ml/</link>
       <pubDate>Fri, 08 Oct 2021 00:28:18 +1300</pubDate>
       
-      <guid>http://example.org/tags/protagonist-ml/</guid>
+      <guid>https://pvc-tl.netlify.app/tags/protagonist-ml/</guid>
       <description></description>
     </item>
     
     <item>
       <title>protagonist mc</title>
-      <link>http://example.org/tags/protagonist-mc/</link>
+      <link>https://pvc-tl.netlify.app/tags/protagonist-mc/</link>
       <pubDate>Wed, 06 Oct 2021 00:16:17 +1300</pubDate>
       
-      <guid>http://example.org/tags/protagonist-mc/</guid>
+      <guid>https://pvc-tl.netlify.app/tags/protagonist-mc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>villain ml</title>
-      <link>http://example.org/tags/villain-ml/</link>
+      <link>https://pvc-tl.netlify.app/tags/villain-ml/</link>
       <pubDate>Wed, 06 Oct 2021 00:16:17 +1300</pubDate>
       
-      <guid>http://example.org/tags/villain-ml/</guid>
+      <guid>https://pvc-tl.netlify.app/tags/villain-ml/</guid>
       <description></description>
     </item>
     

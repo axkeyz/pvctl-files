@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>villain ml on PVC TL</title>
-    <link>http://example.org/tags/villain-ml/</link>
-    <description>Recent content in villain ml on PVC TL</description>
+    <title>villain ml on PVC-TL</title>
+    <link>https://pvc-tl.netlify.app/tags/villain-ml/</link>
+    <description>Recent content in villain ml on PVC-TL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
     <lastBuildDate>Wed, 06 Oct 2021 00:16:17 +1300</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/villain-ml/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pvc-tl.netlify.app/tags/villain-ml/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>I was the MC</title>
-      <link>http://example.org/novel/i-was-the-mc/</link>
+      <link>https://pvc-tl.netlify.app/novel/i-was-the-mc/</link>
       <pubDate>Wed, 06 Oct 2021 00:16:17 +1300</pubDate>
       
-      <guid>http://example.org/novel/i-was-the-mc/</guid>
+      <guid>https://pvc-tl.netlify.app/novel/i-was-the-mc/</guid>
       <description></description>
     </item>
     
     <item>
       <title>I was the MC - Chapter 001</title>
-      <link>http://example.org/novel/i-was-the-mc/001/</link>
+      <link>https://pvc-tl.netlify.app/novel/i-was-the-mc/001/</link>
       <pubDate>Wed, 06 Oct 2021 00:16:17 +1300</pubDate>
       
-      <guid>http://example.org/novel/i-was-the-mc/001/</guid>
+      <guid>https://pvc-tl.netlify.app/novel/i-was-the-mc/001/</guid>
       <description>&lt;p&gt;The new lord of the Demon Realm was a lazy, lazy person who spent his waking hours eating and doing nothing else. Everyone in the Demon Palace knew it.&lt;/p&gt;</description>
     </item>
     

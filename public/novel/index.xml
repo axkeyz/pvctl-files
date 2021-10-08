@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>All Novels on PVC TL</title>
-    <link>http://example.org/novel/</link>
-    <description>Recent content in All Novels on PVC TL</description>
+    <title>All Novels on PVC-TL</title>
+    <link>https://pvc-tl.netlify.app/novel/</link>
+    <description>Recent content in All Novels on PVC-TL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
     <lastBuildDate>Fri, 08 Oct 2021 00:28:18 +1300</lastBuildDate>
     
-	<atom:link href="http://example.org/novel/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pvc-tl.netlify.app/novel/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Translator on PVC TL</title>
-    <link>http://example.org/translator/</link>
-    <description>Recent content in Translator on PVC TL</description>
+    <title>Translator on PVC-TL</title>
+    <link>https://pvc-tl.netlify.app/translator/</link>
+    <description>Recent content in Translator on PVC-TL</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-nz</language>
     <lastBuildDate>Fri, 08 Oct 2021 00:28:18 +1300</lastBuildDate>
     
-	<atom:link href="http://example.org/translator/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pvc-tl.netlify.app/translator/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>xah</title>
-      <link>http://example.org/translator/xah/</link>
+      <link>https://pvc-tl.netlify.app/translator/xah/</link>
       <pubDate>Fri, 08 Oct 2021 00:28:18 +1300</pubDate>
       
-      <guid>http://example.org/translator/xah/</guid>
+      <guid>https://pvc-tl.netlify.app/translator/xah/</guid>
       <description></description>
     </item>
     
