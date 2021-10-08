@@ -17,21 +17,30 @@
             </div>
             {{ partial "nav.html" . }}
             <div>
-            {{ $pages := where site.RegularPages "Type" "in" "novel" }}
-            {{ range (.Paginate $pages).Pages }}
-                <article>
-                    <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a></h3>
-                    <div class="less">
-                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read
-                    </div>
-                    <div class="em">{{ .Summary }}</div>
-                    {{ if .Truncated }}
-                    <small><a href="{{ .RelPermalink }}">Read More &gt;&gt;</a></small>
-                    {{ else }}
-                    <small><a href="javascript:;"></a></small>
-                    {{ end }}
-                <article>
-            {{ end }}
+                <h2>Announcements</h2>
+                {{ range first 3 (where site.RegularPages "Type" "in" "post") }}
+                    <article>
+                        <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }} -  {{ .PublishDate.Format "02/01/2006" }}</a></h3>
+                        <div class="em">{{ .Content }}</div>
+                    <article>
+                {{ end }}
+                <div class="line-dotted"></div>
+                <h2>Latest Updates</h2>
+                {{ $pages := where site.RegularPages "Type" "in" "novel" }}
+                {{ range (.Paginate $pages 5).Pages }}
+                    <article>
+                        <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a></h3>
+                        <div class="less">
+                            <time>Published: {{ .PublishDate.Format "January 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read
+                        </div>
+                        <div class="em">{{ .Summary }}</div>
+                        {{ if .Truncated }}
+                        <small><a href="{{ .RelPermalink }}">Read More &gt;&gt;</a></small>
+                        {{ else }}
+                        <small><a href="javascript:;"></a></small>
+                        {{ end }}
+                    <article>
+                {{ end }}
             </div>
             <div class="pages">
                 {{ if .Paginator.HasPrev }}

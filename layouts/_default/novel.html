@@ -18,14 +18,46 @@
             {{ partial "nav.html" . }}
             <div>
                 {{ if .RegularPages }}
-                <h2>{{ .Title }} - Table of Contents</h2>
-                {{ range .RegularPages.ByTitle }}
-                    <h3><a href="{{ .RelPermalink }}">CHAPTER {{ .File.BaseFileName }}
-                        {{ if .Params.subtitle }}
-                            : {{ .Params.subtitle }}
+                    <h2 class="green">{{ .Title }} - Table of Contents</h2>
+                    {{ if .Params.Summary }}
+                        <h3>Summary</h3>
+                        {{ .Params.Summary }}
+                    <br />
+                    {{ end }}
+
+                    {{ if .Params.original }}
+                    {{- $param := $.Params.original -}}
+                    {{ range $param }}
+                        {{ range $key, $value := . }}
+                        <p><span class="green">{{ title  $key }}:</span> {{ $value }}</p>
                         {{ end }}
-                    </a></h3>
-                {{ end }}
+                    {{ end }}
+                    {{ end }}
+
+                    <h3>Contents</h3>
+                    {{ range .RegularPages.ByTitle }}
+                        <a class="green-link" href="{{ .RelPermalink }}">CHAPTER {{ .File.BaseFileName }}
+                            {{ if .Params.subtitle }}
+                                : {{ .Params.subtitle }}
+                            {{ end }}
+                        </a><br />
+                    {{ end }}
+
+                    {{ $slug := .Params.slug }}<br />
+                    {{ if isset .Params "categories" -}}
+                    <div class="less">Novel: 
+                        {{ range $index, $name := sort .Params.categories -}}
+                            <a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
+                        {{- end}}
+                    </div>
+                    {{- end }}
+                    {{ if isset .Params "tags" -}}
+                        <div class="less">Tags: 
+                        {{ range $index, $name := sort .Params.tags -}}
+                            <a class="pagelink" href='{{ (printf "/tags/%s/" $name) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
+                        {{- end}}
+                        </div>
+                    {{- end }}
                 {{ end }}
             </div>
             <br>

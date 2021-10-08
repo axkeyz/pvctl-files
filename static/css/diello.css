@@ -176,5 +176,13 @@ footer {
 }
 
 .green {
-    color: #579e18;
+    color: #63c210;
+}
+
+.green-link {
+    text-decoration: none;
+}
+
+.green-link:hover {
+    color: #63c210;
 }

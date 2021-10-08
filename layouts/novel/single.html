@@ -18,12 +18,13 @@
             </div>
             {{ partial "nav.html" . }}
             <div>
+                <div class="less flex-column">
+                    {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}
+                    &nbsp;&nbsp;<a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}'>TOC</a>&nbsp;&nbsp;
+                    {{ if .NextInSection }}|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{.NextInSection.Permalink}}">Next</a>{{ end }}
+                </div>
+                <br />
                 <article>
-                    <div class="less flex-column">
-                        {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}
-                        &nbsp;&nbsp;<a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}'>TOC</a>&nbsp;&nbsp;
-                        {{ if .NextInSection }}|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{.NextInSection.Permalink}}">Next</a>{{ end }}
-                    </div><br />
                     <h3>{{ .Title }}{{if .Params.subtitle}}: {{ .Params.subtitle }}{{end}}</h3>                    
                     <div class="em">{{ .Content | safeHTML }}</div>
                     <br />
@@ -34,7 +35,7 @@
                     </div>
                     <br /><br />
                     <div class="less">
-                        <time>Published: {{ .PublishDate.Format "Monday, Jan 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Word Count: {{ .WordCount }}
+                        <time>Published: {{ .PublishDate.Format "January 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Word Count: {{ .WordCount }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Translator: {{ .Params.Translator }}
                     </div>
                     {{ if isset .Params "categories" -}}
                     <div class="less">Novel: 
