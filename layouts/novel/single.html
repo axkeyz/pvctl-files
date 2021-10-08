@@ -35,7 +35,10 @@
                     </div>
                     <br /><br />
                     <div class="less">
-                        <time>Published: {{ .PublishDate.Format "January 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Word Count: {{ .WordCount }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Translator: {{ .Params.Translator }}
+                        <time>Published: {{ .PublishDate.Format "January 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Word Count: {{ .WordCount }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+                        Translator(s): {{ range $index, $name := sort .Params.translator -}}
+                            {{if gt $index 0 }}, {{end}}<a class="pagelink" href="/translator/{{$name}}">{{ $name }}</a>
+                        {{end}}
                     </div>
                     {{ if isset .Params "category" -}}
                     <div class="less">Novel: 

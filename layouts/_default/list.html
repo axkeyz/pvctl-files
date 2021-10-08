@@ -19,27 +19,18 @@
             <div>
                 <article>
                   {{ if .Pages }}
-                  <h3>All {{ replace (replace (replace (replace .Name "-" " " | title) "Bl" "BL") "Ml" "ML") "Mc" "MC" }} Novels</h3>
+                  <h3>{{ replace (replace (replace (replace .Name "-" " " | title) "Bl" "BL Novels") "Ml" "ML Novels") "Mc" "MC Novels" }}</h3>
                   <ul>
+                    {{ $notnovel := true }}
                     {{ range .Pages.ByTitle }}
                       {{ if not (or ( in .Title "chapter") ( in .Title "Chapter")) }}
-                        <li><a class="green-link" href="/novel/{{ .Params.slug }}">{{ .Title }}</a></li>
+                        <li><a class="green-link" href="{{ .RelPermalink }}">{{ replace (replace (replace (replace .Name "-" " " | title) "Bl" "BL") "Ml" "ML") "Mc" "MC" }}</a></li>
+                        {{ $notnovel = false }}
+                      {{ else if $notnovel }}
+                      <li><a class="green-link" href="{{ .RelPermalink }}">{{ replace (replace (replace (replace .Name "-" " " | title) "Bl" "BL") "Ml" "ML") "Mc" "MC" }}</a></li>
                       {{ end }}
                     {{ end }}
                   </ul>
-                  {{ end }}
-
-                  <br /><br /><h3>All Tags</h3>
-                  {{ $tags := $.Site.Taxonomies.tags.Alphabetical }}
-                  {{ $v1 := where $tags "Count" ">=" 1 }}
-                  {{ $v2 := where $v1 "Term" "not in" (slice "hugo" "tags" "rss") }}
-                  {{ range $v2 }}
-                    {{ if .Term }}
-                    {{ $tagURL := printf "tags/%s" .Term | relURL }}
-                      <a class="green-link" href="{{ $tagURL }}">
-                        {{ .Term }}
-                      </a>&nbsp;&nbsp;
-                    {{ end }}
                   {{ end }}
                 </article>     
             </div>
