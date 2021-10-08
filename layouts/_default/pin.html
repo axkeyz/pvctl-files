@@ -30,6 +30,8 @@
             </div>
             <br>
             <div class="line-dotted"></div>
+            {{ template "_internal/disqus.html" . }}
+            <div class="line-dotted"></div>
             {{ partial "footer.html" . }}
         </div>
         {{ partial "banner.html" . }}

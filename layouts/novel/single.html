@@ -53,6 +53,8 @@
                         </div>
                     {{- end }}
                     <div class="line-dotted"></div>
+                    {{ template "_internal/disqus.html" . }}
+                    <div class="line-dotted"></div>
                 </article>
             </div>
             {{ partial "footer.html" . }}

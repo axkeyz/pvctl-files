@@ -21,8 +21,10 @@
                     <h3>{{ .Title }}</h3>
                     <div class="em">{{ .Content | safeHTML }}</div>
                     <br />
-                    <div class="line-dotted"></div>
                 <article>
+                <div class="line-dotted"></div>
+                {{ template "_internal/disqus.html" . }}
+                <div class="line-dotted"></div>
             </div>
             {{ partial "footer.html" . }}
         </div>

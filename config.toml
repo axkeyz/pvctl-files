@@ -4,6 +4,8 @@ title = "PVC TL"
 
 theme = "niello"
 
+disqusShortname = 'pvc-translations'
+
 [taxonomies]
     tag = 'tags'
     translator = 'translator'
