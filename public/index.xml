@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PVC TL</title>
+    <link>http://example.org/</link>
+    <description>Recent content on PVC TL</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-nz</language>
+    <lastBuildDate>Fri, 08 Oct 2021 13:42:29 +1300</lastBuildDate>
+    
+	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Modus Operandi</title>
+      <link>http://example.org/pin/created-site/</link>
+      <pubDate>Fri, 08 Oct 2021 13:42:29 +1300</pubDate>
+      
+      <guid>http://example.org/pin/created-site/</guid>
+      <description>Since I&amp;rsquo;m notorious for picking up lots of stories -&amp;gt; losing interest -&amp;gt; dropping/disappearing for a long time, I&amp;rsquo;ll just post stuff that I have technically finished translating. Feel free to ask me spoilers ahead though!</description>
+    </item>
+    
+    <item>
+      <title>The Paranoid Protagonist Always Thinks I Have a Crush on Him [Apocalypse] - Chapter 003</title>
+      <link>http://example.org/novel/paranoid-protagonist/003/</link>
+      <pubDate>Fri, 08 Oct 2021 00:28:18 +1300</pubDate>
+      
+      <guid>http://example.org/novel/paranoid-protagonist/003/</guid>
+      <description>&lt;p&gt;Xue: “……”&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About/Contact/Readme</title>
+      <link>http://example.org/about/</link>
+      <pubDate>Thu, 07 Oct 2021 22:22:16 +1300</pubDate>
+      
+      <guid>http://example.org/about/</guid>
+      <description>Howdy!
+P = Protagonist
+V = Villain
+C = Cannon fodder
+Why? Its just too cute!!!!!
+75% MTL
+20% Proofreading
+5% Traditional TL
+It&amp;rsquo;s been a while since I last translated stuff and I&amp;rsquo;m too lazy to do it properly&amp;hellip;
+I&amp;rsquo;ll also be writing some snippets for Hugo &amp;amp; Wordpress slowly, coz current solutions for automatic TOC and category stuff is kinda hard to find/ not my thing&amp;hellip;
+If you would like to contribute to this site either with your translations (I doubt), proofreading, rehosting or some other service, you must be comfortable with learning &amp;amp; using markdown.</description>
+    </item>
+    
+    <item>
+      <title>The Paranoid Protagonist Always Thinks I Have a Crush on Him [Apocalypse] - Chapter 002</title>
+      <link>http://example.org/novel/paranoid-protagonist/002/</link>
+      <pubDate>Thu, 07 Oct 2021 22:05:30 +1300</pubDate>
+      
+      <guid>http://example.org/novel/paranoid-protagonist/002/</guid>
+      <description>&lt;p&gt;Sorry to say, but Lin Shengyu had never learned acting.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Paranoid Protagonist Always Thinks I Have a Crush on Him [Apocalypse] - Chapter 001</title>
+      <link>http://example.org/novel/paranoid-protagonist/001/</link>
+      <pubDate>Thu, 07 Oct 2021 22:02:30 +1300</pubDate>
+      
+      <guid>http://example.org/novel/paranoid-protagonist/001/</guid>
+      <description>&lt;p&gt;After a few nights of reading to finish the million-word novel, Lin Shengyu closed the computer with panda eyes.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>I was the MC - Chapter 001</title>
+      <link>http://example.org/novel/i-was-the-mc/001/</link>
+      <pubDate>Wed, 06 Oct 2021 00:16:17 +1300</pubDate>
+      
+      <guid>http://example.org/novel/i-was-the-mc/001/</guid>
+      <description>&lt;p&gt;The new lord of the Demon Realm was a lazy, lazy person who spent his waking hours eating and doing nothing else. Everyone in the Demon Palace knew it.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
