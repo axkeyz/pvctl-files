@@ -26,7 +26,7 @@
                 <br />
                 <article>
                     <h3>{{ .Title }}{{if .Params.subtitle}}: {{ .Params.subtitle }}{{end}}</h3>                    
-                    <div class="em">{{ .Content | safeHTML }}</div>
+                    <div class="em">{{ replace (replace .Content "<p>" "<div class='paragraph'>") "</p>" "</div>" | safeHTML }}</div>
                     <br />
                     <div class="less flex-column">
                         {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}

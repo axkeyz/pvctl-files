@@ -24,11 +24,10 @@ If you would like to contribute to this site either with your translations (I do
 
 You are welcome to share, distribute, re-translate, print make adaptations etc for non-commercial purposes only. Please remove upon official localisation or requests of the author.
 
-<span class="green">**DO NOT** contact me about retranslations! Just go ahead!</span>  
-<span class="green">**DO NOT** contact me about retranslations! Just go ahead!</span>  
-<span class="green">**DO NOT** contact me about retranslations! Just go ahead!</span>  
-<span class="green">**DO NOT** contact me about retranslations! Just go ahead!</span>
+{{< green "**DO NOT** contact me about retranslations! Just go ahead!" >}}  
+{{< green "**DO NOT** contact me about retranslations! Just go ahead!" >}}  
+{{< green "**DO NOT** contact me about retranslations! Just go ahead!" >}}
 
 I kid you not, they are the most irritating emails you can get.
 
-<span class="green">So, please **DO NOT** contact me about retranslations!!!!</span>  
+{{< green "So, please **DO NOT** contact me about retranslations!!!!" >}}

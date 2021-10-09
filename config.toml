@@ -10,11 +10,6 @@ disqusShortname = 'pvc-translations'
     tag = 'tags'
     translator = 'translator'
 
-[markup]
-    [markup.goldmark]
-        [markup.goldmark.renderer]
-            unsafe = true
-
 [permalinks]
     novel = "/novel/:slug/:filename"
     page = "/:filename"
