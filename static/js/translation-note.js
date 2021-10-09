@@ -10,8 +10,12 @@ function closeTLNote(id){
 
 // Close if @clickaway from modal
 window.onclick = function(event) {
-    var modal = document.getElementsByClassName("modal")[0];
-    if (event.target == modal) {
-        modal.style.display = "none";
+    var modal = document.getElementsByClassName("modal");
+    
+    for(m=0; m<modal.length; m++){
+        if (event.target == modal[m]) {
+            modal[m].style.display = "none";
+            break;
+        }
     }
 }
