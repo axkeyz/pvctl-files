@@ -280,3 +280,7 @@ footer {
 .dark-toggler:hover {
     background-color: #579e18;
 }
+
+.text-center {
+    text-align: center;
+}

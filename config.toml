@@ -34,7 +34,7 @@ disablePathToLower = true
     weight = 2
 
     [[menu.niello]]
-    name = "TL Terms"
+    name = "Terms"
     url = "/common-tl/"
     weight = 3
 
