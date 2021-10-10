@@ -16,7 +16,7 @@ notes:
     - author: "Sorry it ended so quickly. It was mainly because their relationship progressed too fast, and I ran out of stuff to write about. I was also reluctant to make too many twists. QwQ."
     - translator: "Despite how fast it was, I still kinda liked it. There are some glaring things that the author could've done better, but I'll give this a solid 7/10 just for the humour. Plus, it's short, so it won't waste too much time I guess."
     - warnings:
-        - Swearing: "A **** ton."
+        - Swearing: "A **** ton"
         - Sexual Content: "Implied"
         - Ending: "A bit rushed, HE"
 ---

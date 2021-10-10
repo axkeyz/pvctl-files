@@ -5,6 +5,7 @@ title = "PVC-TL"
 theme = "niello"
 
 disqusShortname = 'pvc-translations'
+disablePathToLower = true
 
 [taxonomies]
     tag = 'tags'
@@ -33,6 +34,11 @@ disqusShortname = 'pvc-translations'
     weight = 2
 
     [[menu.niello]]
-    name = "About"
-    url = "/about/"
+    name = "TL Terms"
+    url = "/common-tl/"
     weight = 3
+
+    [[menu.niello]]
+    name = "Other"
+    url = "/about/"
+    weight = 4

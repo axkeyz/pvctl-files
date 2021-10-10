@@ -12,22 +12,33 @@ C = Cannon fodder
 
 Why? Its just too cute!!!!!
 
-75% MTL  
+70% MTL  
 20% Proofreading  
-5% Traditional TL
+10% Traditional TL
 
-It's been a while since I last translated stuff and I'm too lazy to do it properly...
+It's been a while since I last translated stuff and I'm too lazy to do it properly...I code more than I translate, so you might see me pop out with a few Wordpress and Hugo snippets.
 
-I'll also be writing some snippets for Hugo & Wordpress slowly, coz current solutions for automatic TOC and category stuff is kinda hard to find/ not my thing...
+### Recommendation
 
-If you would like to contribute to this site either with your translations (I doubt), proofreading, rehosting or some other service, you must be comfortable with learning & using markdown.
+You are welcome to suggest novels to translate, though I reserve the right to decide whether to translate them or not.
 
-You are welcome to share, distribute, re-translate, print make adaptations etc for non-commercial purposes only. Please remove upon official localisation or requests of the author.
+- Under: 600,000 characters (~120 chapters)
+- Has: A PVC MC and a PVC ML
+- Not: Involve some CEO, entertainment circle (gaming OK) or omegaverse (incl. MPreg)
+- Prefer: Comedy & cannon fodder MCs
 
-{{< green "**DO NOT** contact me about retranslations! Just go ahead!" >}}  
-{{< green "**DO NOT** contact me about retranslations! Just go ahead!" >}}  
-{{< green "**DO NOT** contact me about retranslations! Just go ahead!" >}}
+### Contribution
 
-I kid you not, they are the most irritating emails you can get.
+If you would like to contribute to this site either with your translations (I doubt), proofreading, rehosting or something else, you must be comfortable with learning & using markdown. Just leave a comment below.
+
+### Retranslation
+
+You are welcome to share, distribute, re-translate, print, make adaptations etc for non-commercial purposes only. However, please take it down if contacted by the copyright owners.
+
+**DO NOT** contact me about retranslations! Just go ahead!"  
+**DO NOT** contact me about retranslations! Just go ahead!"  
+**DO NOT** contact me about retranslations! Just go ahead!"
+
+I kid you not, they are the most irritating messages you can get. I'll literally say no if you ask me.
 
 {{< green "So, please **DO NOT** contact me about retranslations!!!!" >}}
