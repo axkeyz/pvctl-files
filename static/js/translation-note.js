@@ -1,3 +1,4 @@
+// Translation note modal
 function getTLNote (id){
     var modal = document.getElementById(id);
     modal.style.display = "block";

@@ -17,7 +17,7 @@
             </div>
             {{ partial "nav.html" . }}
             <div>
-                <h2><a class="green-link" href="/pin">Announcements</a></h2>
+                <h2><a href="/pin">Announcements</a></h2>
                 {{ range first 3 (where site.RegularPages "Type" "in" "pin") }}
                     <article>
                         <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }} -  {{ .PublishDate.Format "02/01/2006" }}</a></h3>
@@ -29,7 +29,7 @@
                 {{ $pages := where site.RegularPages "Type" "in" "novel" }}
                 {{ range (.Paginate $pages 5).Pages }}
                     <article>
-                        <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a></h3>
+                        <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}{{if .Params.subtitle}}: {{ .Params.subtitle }}{{end}}</a></h3>
                         <div class="em">{{ replace (replace .Summary "<p>" "<div class='paragraph'>") "</p>" "</div>" | safeHTML }}</div>
                         <div class="less flex-left">
                             <time>Published: {{ .PublishDate.Format "January 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{ .RelPermalink }}">Read More &gt;&gt;</a>
