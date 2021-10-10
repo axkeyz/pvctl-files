@@ -57,6 +57,10 @@ h3 > a {
     font-size   : 18px;
 } 
 
+article {
+    padding-bottom: 18px;
+}
+
 footer {
     display         : inline-flex;
     justify-content : center;
@@ -210,7 +214,7 @@ footer {
 
 /* The Close Button */
 .close {
-    color: white;
+    color: #000;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -218,7 +222,7 @@ footer {
 
 .close:hover,
 .close:focus {
-    color: #fff;
+    color: #63c210;
     text-decoration: none;
     cursor: pointer;
 }
@@ -391,24 +395,6 @@ body.dark-theme .translation-note {
     text-decoration-color: #fff;
 }
 
-/* The Modal (background) */
-body.dark-theme .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    -webkit-animation-name: fadeIn; /* Fade in the background */
-    -webkit-animation-duration: 0.4s;
-    animation-name: fadeIn;
-    animation-duration: 0.4s
-}
-
 /* Modal Content */
 body.dark-theme .modal-content {
     position: fixed;
@@ -456,6 +442,10 @@ body.dark-theme .dark-toggler:hover {
 
 .text-center {
     text-align: center;
+}
+
+.align-right {
+    text-align: right;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -729,5 +719,122 @@ body.dark-theme .dark-toggler:hover {
 
     .text-center {
         text-align: center;
+    }
+
+    html, body.light-theme {
+        margin              : 0;
+        padding             : 0;
+        font-family         : Nunito;
+        font-size           : 18px;
+        color               : #000;
+        line-height         : 200%;
+        background-color    : #fff;
+        width               : 100vw;
+        max-width           : 100vw;
+        overflow-x          : hidden;
+    }
+    
+    body.light-theme h3 {
+        margin      : 0;
+        padding     : 0;
+        font-family : Nunito;
+        font-size   : 20px;
+        color: #579e18;
+    }
+    
+    body.light-theme a {
+        color           : #000;
+    }
+    
+    body.light-theme h1 > a {
+        color                   : #579e18;
+        text-decoration         : none; 
+    }
+    
+    body.light-theme a:hover {
+        color                   : #63c210;
+    }
+    
+    body.light-theme h2 > a {
+        color                   : #000;
+        text-decoration         : none;
+    }
+    
+    body.light-theme h3 > a {
+        color                   : #579e18;
+        text-decoration         : none;
+    }
+    
+    body.light-theme footer {
+        display         : inline-flex;
+        justify-content : center;
+        padding         : 30px 0;
+        width           : 100%;
+        font-family     : Nunito;
+        font-size       : 18px;
+        color           : #000;
+    }
+    
+    body.light-theme .navigation {
+        display         : -webkit-flex;
+        display         : flex;
+        flex-direction  : row;
+        flex-wrap       : nowrap;
+        justify-content : flex-end;
+        margin          : 0 0 50px;
+        padding         : 0;
+        font-size       : 20px;
+        border-bottom   : 1px solid #333;
+        height          : 38px;
+    }
+    
+    body.light-theme .navigation > a {
+        display         : inline-flex;
+        margin          : 0;
+        padding         : 0 20px;
+        height          : 100%;
+        color           : #000;
+        text-decoration : none;
+    }
+    
+    body.light-theme .navigation > a:hover {
+        border-bottom   : 3px solid #63c210;
+    }
+    
+    body.light-theme .navigation > .current {
+        border-bottom   : 3px solid #579e18;
+    }
+    
+    body.light-theme .pages > a {
+        color           : #63c210;
+    }
+    
+    body.light-theme .translation-note {
+        cursor: pointer;
+        display:inline;
+        text-decoration: underline;
+        text-decoration-style: dashed;
+        text-decoration-color: #000;
+    }
+    
+    /* Modal Content */
+    body.light-theme .modal-content {
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
+        border-top: 3px solid #63c210;
+        width: 100%;
+        -webkit-animation-name: slideIn;
+        -webkit-animation-duration: 0.4s;
+        animation-name: slideIn;
+        animation-duration: 0.4s;
+    }
+    
+    /* The Close Button */
+    body.light-theme .close {
+        color: #000;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
     }
 }
