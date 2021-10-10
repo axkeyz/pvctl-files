@@ -800,6 +800,10 @@ body.dark-theme .dark-toggler:hover {
         border-bottom   : 1px solid #333;
         height          : 38px;
     }
+
+    body.light-theme .green {
+        color: #579e18;
+    }
     
     body.light-theme .navigation > a {
         display         : inline-flex;
