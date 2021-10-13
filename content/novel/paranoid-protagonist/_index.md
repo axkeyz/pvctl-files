@@ -5,7 +5,7 @@ slug: "paranoid-protagonist"
 category: "The Paranoid Protagonist Always Thinks I Have a Crush on Him [Apocalypse]"
 tags: ["cannon fodder mc", "protagonist ml", "bl"]
 
-summary: "Lin Shenyu read a stallion novel set in a zombie apocalypse. The male protagonist was ruthless and cold-blooded, stepping on the bones of thousands of villains to reach the top. Which is fine, but Lin Shenyu was forced to transmigrate into the novel as a cannon fodder right after the stabbing scene. Uh...is it too late to put down the knife now?"
+summary: "Lin Shenyu read a stallion novel set in a zombie apocalypse. The male protagonist was ruthless and cold-blooded, stepping on the bones of thousands of villains to reach the top. Which is fine, but Lin Shenyu was forced to transmigrate into the novel as a cannon fodder right after stabbing the protagonist. Uh...is it too late to drop the knife now?"
 
 original:
     - name: "偏执男主总误以为我暗恋他[末世]"
