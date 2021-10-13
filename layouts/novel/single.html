@@ -27,7 +27,7 @@
                 <br />
                 <article>
                     <h3>{{ .Title }}{{if .Params.subtitle}}: {{ .Params.subtitle }}{{end}}</h3>                    
-                    <div class="em">{{ replace (replace .Content "<p>" "<div class='paragraph'>") "</p>" "</div>" | safeHTML }}</div>
+                    <div class="em">{{ replace (replace (replace .Content "<p>" "<div class='paragraph'>") "</p>" "</div>") "<br>" "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" | safeHTML }}</div>
                     <br />
                     <div class="less text-center">
                         {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}

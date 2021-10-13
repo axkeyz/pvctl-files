@@ -31,7 +31,7 @@
                 {{ range (.Paginate $pages 5).Pages }}
                     <article>
                         <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}{{if .Params.subtitle}}: {{ .Params.subtitle }}{{end}}</a></h3>
-                        <div class="em">{{ replace (replace .Summary "<p>" "<div class='paragraph'>") "</p>" "</div>" | safeHTML }}</div>
+                        <div class="em">{{ .Summary | safeHTML }}</div>
                         <div class="less align-right">
                             <time>{{ .PublishDate.Format "January 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{ .RelPermalink }}">More &gt;&gt;</a>
                         </div>

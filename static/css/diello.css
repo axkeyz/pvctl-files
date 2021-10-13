@@ -257,6 +257,7 @@ footer {
 .paragraph {
     margin-bottom: 18px;
     margin-top: 18px;
+    text-indent: 36px;
 }
 
 /******************highlight.js override*************/
@@ -702,6 +703,7 @@ body.dark-theme .dark-toggler:hover {
     .paragraph {
         margin-bottom: 18px;
         margin-top: 18px;
+        text-indent: 36px;
     }
 
     /******************highlight.js override*************/
