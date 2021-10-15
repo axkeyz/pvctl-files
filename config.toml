@@ -40,3 +40,8 @@ disablePathToLower = true
     name = "Other"
     url = "/about/"
     weight = 4
+
+[markup]
+    [markup.highlight]
+        style = 'native'
+        linenos = true

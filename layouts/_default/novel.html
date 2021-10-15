@@ -76,7 +76,7 @@
                                 <a class="green-link" href="/novel/{{.Params.slug}}">&#10132; {{ .Title }}</a>
                                 <p>{{ .Params.Summary }}
                                     {{ if isset .Params "tags" -}}
-                                        <div class="less flex-left">Tags: &nbsp;
+                                        <div class="less align-right">Tags: &nbsp;
                                         {{ range $index, $name := sort .Params.tags -}}
                                             <a class="pagelink" href='{{ (printf "/tags/%s/" $name) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
                                         {{- end}}

@@ -8,5 +8,5 @@ slug: "paranoid-protagonist"
 category: "The Paranoid Protagonist Always Thinks I Have a Crush on Him [Apocalypse]"
 tags: ["cannon fodder mc", "protagonist ml", "bl"]
 
-translator: ["Axis"]
+translator: ["Baxton"]
 ---
