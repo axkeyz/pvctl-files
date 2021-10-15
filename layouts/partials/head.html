@@ -10,6 +10,12 @@
     <meta name="keywords" content="{{ with .Keywords }} {{- delimit . ", " -}} {{ end }}">
     <meta name="description" content="{{ with .Description }} {{- . -}} {{ end }}">
     {{ end }}
+    <link rel="icon" type="image/png" href="{{.Site.BaseURL | relLangURL}}img/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="{{.Site.BaseURL | relLangURL}}img/favicon-32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="{{.Site.BaseURL | relLangURL}}img/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="{{.Site.BaseURL | relLangURL}}img/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="{{.Site.BaseURL | relLangURL}}img/android-chrome-512x512.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
