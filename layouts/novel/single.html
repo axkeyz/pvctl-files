@@ -19,13 +19,13 @@
             </div>
             {{ partial "nav.html" . }}
             <div>
-                <div class="less text-center">
-                    {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}
-                    &nbsp;&nbsp;<a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}'>TOC</a>&nbsp;&nbsp;
-                    {{ if .NextInSection }}|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{.NextInSection.Permalink}}">Next</a>{{ end }}
-                </div>
-                <br />
                 <article>
+                    <div class="less text-center">
+                        {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}
+                        &nbsp;&nbsp;<a class="pagelink" href='{{ (printf "/novel/%s/" $slug) | urlize }}'>TOC</a>&nbsp;&nbsp;
+                        {{ if .NextInSection }}|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{.NextInSection.Permalink}}">Next</a>{{ end }}
+                    </div>
+                    <br />
                     <h3>{{ .Title }}{{if .Params.subtitle}}: {{ .Params.subtitle }}{{end}}</h3>                    
                     <div class="em">{{ replace (replace (replace .Content "<p>" "<div class='paragraph'>") "</p>" "</div>") "<br>" "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" | safeHTML }}</div>
                     <br />
@@ -53,8 +53,6 @@
                         {{- end}}
                         </div>
                     {{- end }}
-                    <div class="line-dotted"></div>
-                    {{ template "_internal/disqus.html" . }}
                     <div class="line-dotted"></div>
                 </article>
             </div>

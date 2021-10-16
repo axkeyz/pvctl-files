@@ -1,10 +1,9 @@
 baseURL = "https://pvc-tl.netlify.app/"
 languageCode = "en-nz"
-title = "PVC-TL"
+title = "PVC TL"
 
 theme = "niello"
 
-disqusShortname = 'pvc-translations'
 disablePathToLower = true
 
 [taxonomies]
