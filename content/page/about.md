@@ -6,9 +6,9 @@ draft: false
 
 Howdy! 
 
-P = Protagonist  
-V = Villain  
-C = Cannon fodder
+P = Protagonist (Paranoid)
+V = Villain (Vicious)
+C = Cannon fodder (Comedic relief)
 
 Why? Its just too cute!!!!!
 
@@ -16,13 +16,13 @@ Why? Its just too cute!!!!!
 20% Proofreading  
 10% Traditional TL
 
-It's been a while since I last translated stuff and I'm too lazy to do it properly...I code more than I translate, so you might see me pop out with a few Wordpress and Hugo snippets.
+It's been a while since I last translated stuff and I'm too lazy to do it properly...I code more than I translate, so you might see me pop out with a few Wordpress and Hugo snippets more than translations HAHA.
 
 ### Recommendation
 
 You are welcome to suggest novels to translate, though I reserve the right to decide whether to translate them or not.
 
-- Under: 600,000 characters (~120 chapters)
+- Under: 500,000 characters (~130 chapters)
 - Has: A PVC MC and a PVC ML
 - Not: Involve some CEO, entertainment circle (gaming OK) or omegaverse (incl. MPreg)
 - Prefer: Comedy & cannon fodder MCs
@@ -42,3 +42,7 @@ You are welcome to share, distribute, re-translate, print, make adaptations etc 
 I kid you not, they are the most irritating messages you can get. I'll literally say no if you ask me.
 
 {{< green "So, please **DO NOT** contact me about retranslations!!!!" >}}
+
+### Shameless comments, coz I like to show off my site
+
+No ads, which is pretty impressive for a static site I guess!

@@ -56,7 +56,7 @@
                 </article>
             </div>
             <div class="line-dotted"></div>
-            {{ partial "comments.html" . }}
+            {{- partial "comments.html" (dict "context" . "comments" .Params.comments ) -}}
             {{ partial "footer.html" . }}
         </div>
         {{ partial "banner.html" . }}
