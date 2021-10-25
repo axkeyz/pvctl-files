@@ -1,0 +1,38 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+{{ partial "head.html" . }}
+
+<body>
+  {{ partial "ld-check.html" . }}
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        {{ partial "banner.html" . }}
+        <div class="home">
+            <div class="logo">
+                <h1><a href="/">{{.Site.Title}}</a></h1>
+            </div>
+            {{ partial "nav.html" . }}
+            <div>
+              {{ $pages := where site.RegularPages "Type" "in" "post" }}
+              <article>
+              {{ range (.Paginate $pages 20).Pages.ByDate.Reverse }}
+                <h3><a href="{{ .RelPermalink }}">&#10132; <time>{{ .PublishDate.Format "01/02/06" }}</time>: {{ .Title }} {{ if .Params.category }}-- {{replace .Params.category "-" " " | title }}{{ end }}</a></h3>
+              {{ end }}
+              </article>     
+            </div>
+            <br>
+            <div class="line-dotted"></div>
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "banner.html" . }}
+    </div>
+
+
+  {{ partial "foot.html" . }}
+</body>
+</html>

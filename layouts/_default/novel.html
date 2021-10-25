@@ -42,6 +42,14 @@
                             {{ end }}
                         </a><br/>
                     {{ end }}
+                    {{ $pages := where site.RegularPages "Type" "in" "post" }}
+                    {{ $og_category := .Params.slug }}
+                    <br/><h3>Related Posts & Updates</h3>
+                    {{ range (.Paginate $pages 20).Pages.ByDate.Reverse }}
+                        {{ if eq .Params.category $og_category}}
+                            <a class="green-link" href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a><br />
+                        {{ end }}
+                    {{ end }}
                     {{ if isset .Params "notes" -}}
                         <br/><h3>Notes</h3>
                         <ul>{{ range $index, $name := sort .Params.notes -}}

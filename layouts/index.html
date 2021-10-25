@@ -21,7 +21,7 @@
                 <h2><a href="/pin">Announcements</a></h2>
                 {{ range first 3 (where site.RegularPages "Type" "in" "pin") }}
                     <article>
-                        <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }} -  {{ .PublishDate.Format "02/01/2006" }}</a></h3>
+                        <h3><a href="{{ .RelPermalink }}">&#9734; {{ .Title }} -  {{ .PublishDate.Format "02/01/2006" }}</a></h3>
                         <div class="em"><p>{{ .Summary }}</p></div>
                     </article>
                 {{ end }}

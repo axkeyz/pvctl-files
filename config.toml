@@ -13,6 +13,7 @@ disablePathToLower = true
 [permalinks]
     novel = "/novel/:slug/:filename"
     page = "/:filename"
+    post = "/post/:filename"
 
 [params]
     keywords = "novels, bl, chinese translation"
@@ -39,3 +40,6 @@ disablePathToLower = true
     [markup.highlight]
         style = 'native'
         linenos = true
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = false

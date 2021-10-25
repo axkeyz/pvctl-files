@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+{{ partial "head.html" . }}
+
+<body>
+    {{ partial "ld-check.html" . }}
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        {{ partial "banner.html" . }}
+        <div class="home">
+            <div class="logo">
+                <h1><a href="/">{{.Site.Title}}</a></h1>
+            </div>
+            {{ partial "nav.html" . }}
+            <div>
+                <article>
+                    <h3>{{ .Title }}</h3>
+                    <div class="less">
+                        <time>Published: {{ .PublishDate.Format "January 2, 2006" }}</time>
+                    </div>
+                    <div class="em">{{ .Content | safeHTML }}</div>
+
+                    <br />
+                    <div class="less">
+                        <a class="pagelink" href='/novel/{{ .Params.category }}' title="See related posts">See related "{{replace .Params.category "-" " " | title }}" posts</a>
+                    </div>
+                </article>
+            </div>
+            <div class="line-dotted"></div>
+            {{- partial "comments.html" (dict "context" . "comments" .Params.comments ) -}}
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "banner.html" . }}
+    </div>
+  {{ partial "foot.html" . }}
+</body>
+</html>
