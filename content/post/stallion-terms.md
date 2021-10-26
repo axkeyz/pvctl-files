@@ -3,6 +3,8 @@ title: "Common \"stallion\" novel terms"
 date: 2021-10-10T21:17:28+13:00
 categories: ['paranoid-protagonist']
 draft: false
+
+poster: ["axis"]
 ---
 
 Protagonist-centric novels, or stallion novels, are often one where the protagonist becomes extremely overpowered. They often go through a long period of suffering, but eventually luck turns on their side as they're a "son of the heavens". They then start beating up bullies (a type of cannon fodder) with their golden finger(s) (cheats) and start collecting a massive harem.

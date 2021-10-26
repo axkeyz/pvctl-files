@@ -2,6 +2,8 @@
 title: "Markdown Help Area"
 date: 2021-10-16T01:19:37+13:00
 draft: false
+
+poster: ["axis"]
 ---
 
 This site is based on markdown...from content to comments. It's not a common choice amongst most Internet dwellers (sadly) so here's a help area if you need help.<!--more-->
