@@ -35,9 +35,9 @@ If you would like to contribute to this site either with your translations (I do
 
 You are welcome to share, distribute, re-translate, print, make adaptations etc for non-commercial purposes only. However, please take it down if contacted by the copyright owners.
 
-**DO NOT** contact me about retranslations! Just go ahead!"  
-**DO NOT** contact me about retranslations! Just go ahead!"  
-**DO NOT** contact me about retranslations! Just go ahead!"
+{{< green "**DO NOT** contact me about retranslations!!!!" >}}  
+{{< green "**DO NOT** contact me about retranslations!!!!" >}}  
+{{< green "**DO NOT** contact me about retranslations!!!!" >}}
 
 I kid you not, they are the most irritating messages you can get. I'll literally say no if you ask me.
 
