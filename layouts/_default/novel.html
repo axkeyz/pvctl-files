@@ -47,7 +47,7 @@
                     <br/><h3>Related Posts & Updates</h3>
                     {{ range (.Paginate $pages 20).Pages.ByDate.Reverse }}
                         {{ if or (in .Params.categories $og_category) (in .Params.categories "all")}}
-                            <a class="green-link" href="{{ .RelPermalink }}">&#10227; {{ .Title }}</a><br />
+                            <a class="green-link" href="{{ .RelPermalink }}">&#8635; {{ .Title }}</a><br />
                         {{ end }}
                     {{ end }}
                     {{ if isset .Params "notes" -}}
@@ -81,7 +81,7 @@
                     {{ if in .Permalink "novel" }}
                         {{- range .Pages -}}
                             <article>
-                                <a class="green-link" href="/novel/{{.Params.slug}}">&#187; {{ .Title }}</a>
+                                <a class="green-link" href="/novel/{{.Params.slug}}">&#8859; {{ .Title }}</a>
                                 <p>{{ .Params.Summary }}
                                     {{ if isset .Params "tags" -}}
                                         <div class="less align-right">Tags: &nbsp;
