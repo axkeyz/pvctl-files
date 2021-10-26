@@ -28,7 +28,7 @@
                     {{ range .Params.categories }}
                     {{ if not (eq . "all") }}
                     <div class="less">
-                        <a class="pagelink" href='/novel/{{ . }}' title="See related posts">See related "{{replace . "-" " " | title }}" posts</a>
+                        <a class="pagelink" href='/novel/{{ . }}' title="See related posts">Back to {{replace . "-" " " | title }}</a>
                     </div>
                     {{ end }}
                     {{ end }}
