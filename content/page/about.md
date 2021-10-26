@@ -6,7 +6,7 @@ draft: false
 
 Howdy! 
 
-P = Protagonist (Paranoid)
+P = Protagonist (Possessive)
 V = Villain (Vicious)
 C = Cannon fodder (Comedic relief)
 
@@ -42,9 +42,3 @@ You are welcome to share, distribute, re-translate, print, make adaptations etc 
 I kid you not, they are the most irritating messages you can get. I'll literally say no if you ask me.
 
 {{< green "So, please **DO NOT** contact me about retranslations!!!!" >}}
-
-### Shameless comments, coz I like to show off my site(s)
-
-No ads, which is pretty impressive for a static site I hope! This site is a static one built with Hugo, hosted on Github + deployed on Netlify. The comments box is made from Remark42, coz the free version of Disqus still has ads/tracking, and that's hosted by a Docker container in a free Oracle server. The setup is free, so technically I could buy a domain name (~$10 per year) and make this site super professional-looking but nahhhh.
-
-My personal portfolio site uses the same kind of setup (but with a proper domain name I guess), so some of the javascript is hosted on that. You may see it around if you like to snoop around a site's source code (I know I check sites with BuiltWith all the time)!
