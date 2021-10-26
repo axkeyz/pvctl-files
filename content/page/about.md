@@ -6,8 +6,8 @@ draft: false
 
 Howdy! 
 
-P = Protagonist (Possessive)
-V = Villain (Vicious)
+P = Protagonist (Possessive)  
+V = Villain (Vicious)  
 C = Cannon fodder (Comedic relief)
 
 Why? Its just too cute!!!!!
@@ -16,11 +16,11 @@ Why? Its just too cute!!!!!
 20% Proofreading  
 10% Traditional TL
 
-It's been a while since I last translated stuff and I'm too lazy to do it properly...I code more than I translate, so you might see me pop out with a few Wordpress and Hugo snippets more than translations HAHA.
+It's been a while since I last translated stuff and I'm too lazy to do it properly...I code more than I translate, so you'll probably see less translations than a typical site.
 
 ### Recommendation
 
-You are welcome to suggest novels to translate, though I reserve the right to decide whether to translate them or not.
+You are welcome to suggest novels to translate, but there's a pretty high chance I won't pick them up.
 
 - Under: 500,000 characters (~130 chapters)
 - Has: A PVC MC and a PVC ML
