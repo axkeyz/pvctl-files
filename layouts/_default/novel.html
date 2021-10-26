@@ -19,39 +19,43 @@
             {{ partial "nav.html" . }}
             <div>
                 {{ if .RegularPages }}
-                    <h2 class="green">{{ .Title }} - Table of Contents</h2>
+                    <p><h2 class="green">{{ .Title }} - Table of Contents</h2>
                     {{ if .Params.Summary }}
                         <h3>Summary</h3>
                         {{ .Params.Summary }}
                     <br />
-                    {{ end }}
+                    {{ end }}</p>
 
                     {{ if .Params.original }}
                     {{- $param := $.Params.original -}}
+                        <p>
                         {{ range $param }}
                             {{ range $key, $value := . }}
-                            <p><span class="green">{{ title  $key }}:</span> {{ $value | markdownify }}</p>
+                            <span class="green">{{ title  $key }}:</span> {{ $value | markdownify }}<br />
                             {{ end }}
                         {{ end }}
+                        </p>
                     {{ end }}
-                    <h3>Contents</h3>
+                    <p><h3>Contents</h3>
                     {{ range .RegularPages.ByTitle }}
                         <a class="green-link" href="{{ .RelPermalink }}">&#187; Chapter {{ .File.BaseFileName }}
                             {{ if .Params.subtitle }}
                                 : {{ .Params.subtitle }}
                             {{ end }}
-                        </a><br/>
+                        </a><br />
                     {{ end }}
+                    </p>
                     {{ $pages := where site.RegularPages "Type" "in" "post" }}
                     {{ $og_category := .Params.slug }}
-                    <br/><h3>Related Posts & Updates</h3>
+                    <p><h3>Related Posts & Updates</h3>
                     {{ range (.Paginate $pages 20).Pages.ByDate.Reverse }}
                         {{ if or (in .Params.categories $og_category) (in .Params.categories "all")}}
                             <a class="green-link" href="{{ .RelPermalink }}">&#8635; {{ .Title }}</a><br />
                         {{ end }}
                     {{ end }}
+                    </p>
                     {{ if isset .Params "notes" -}}
-                        <br/><h3>Notes</h3>
+                        <p><h3>Notes</h3>
                         <ul>{{ range $index, $name := sort .Params.notes -}}
                             {{ range $key, $value := . }}
                                 {{ if eq $key "warnings"}}
@@ -67,7 +71,7 @@
                                 {{ end }}
                             {{ end }}
                         {{- end}}
-                        </ul>
+                        </ul></p>
                     {{ end }}
                     {{ if isset .Params "tags" -}}
                         <br/><div class="less">Tags: 
