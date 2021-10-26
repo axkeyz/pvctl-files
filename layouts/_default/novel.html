@@ -30,13 +30,13 @@
                     {{- $param := $.Params.original -}}
                         {{ range $param }}
                             {{ range $key, $value := . }}
-                            <p><span class="green">{{ title  $key }}:</span> {{ $value }}</p>
+                            <p><span class="green">{{ title  $key }}:</span> {{ $value | markdownify }}</p>
                             {{ end }}
                         {{ end }}
                     {{ end }}
                     <h3>Contents</h3>
                     {{ range .RegularPages.ByTitle }}
-                        <a class="green-link" href="{{ .RelPermalink }}">&#10132; Chapter {{ .File.BaseFileName }}
+                        <a class="green-link" href="{{ .RelPermalink }}">&#187; Chapter {{ .File.BaseFileName }}
                             {{ if .Params.subtitle }}
                                 : {{ .Params.subtitle }}
                             {{ end }}
@@ -46,8 +46,8 @@
                     {{ $og_category := .Params.slug }}
                     <br/><h3>Related Posts & Updates</h3>
                     {{ range (.Paginate $pages 20).Pages.ByDate.Reverse }}
-                        {{ if eq .Params.category $og_category}}
-                            <a class="green-link" href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a><br />
+                        {{ if or (in .Params.categories $og_category) (in .Params.categories "all")}}
+                            <a class="green-link" href="{{ .RelPermalink }}">&#10227; {{ .Title }}</a><br />
                         {{ end }}
                     {{ end }}
                     {{ if isset .Params "notes" -}}
@@ -81,7 +81,7 @@
                     {{ if in .Permalink "novel" }}
                         {{- range .Pages -}}
                             <article>
-                                <a class="green-link" href="/novel/{{.Params.slug}}">&#10132; {{ .Title }}</a>
+                                <a class="green-link" href="/novel/{{.Params.slug}}">&#187; {{ .Title }}</a>
                                 <p>{{ .Params.Summary }}
                                     {{ if isset .Params "tags" -}}
                                         <div class="less align-right">Tags: &nbsp;

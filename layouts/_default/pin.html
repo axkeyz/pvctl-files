@@ -21,7 +21,7 @@
                 {{ $pages := where site.RegularPages "Type" "in" "pin" }}
                 {{ range (.Paginate $pages 20).Pages }}
                     <article>
-                        <h3><a href="{{ .RelPermalink }}">&#10132; {{ .Title }}</a></h3>
+                        <h3><a href="{{ .RelPermalink }}">&#187; {{ .Title }}</a></h3>
                         <div class="em">{{ .Summary }}</div>
                         <div class="less align-right">
                             <time>{{ .PublishDate.Format "January 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;{{ .ReadingTime }} minute read&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{ .RelPermalink }}">Read More &gt;&gt;</a>

@@ -24,11 +24,14 @@
                         <time>Published: {{ .PublishDate.Format "January 2, 2006" }}</time>
                     </div>
                     <div class="em">{{ .Content | safeHTML }}</div>
-
                     <br />
+                    {{ range .Params.categories }}
+                    {{ if not (eq . "all") }}
                     <div class="less">
-                        <a class="pagelink" href='/novel/{{ .Params.category }}' title="See related posts">See related "{{replace .Params.category "-" " " | title }}" posts</a>
+                        <a class="pagelink" href='/novel/{{ . }}' title="See related posts">See related "{{replace . "-" " " | title }}" posts</a>
                     </div>
+                    {{ end }}
+                    {{ end }}
                 </article>
             </div>
             <div class="line-dotted"></div>

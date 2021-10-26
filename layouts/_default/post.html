@@ -21,7 +21,7 @@
               {{ $pages := where site.RegularPages "Type" "in" "post" }}
               <article>
               {{ range (.Paginate $pages 20).Pages.ByDate.Reverse }}
-                <h3><a href="{{ .RelPermalink }}">&#10132; <time>{{ .PublishDate.Format "01/02/06" }}</time>: {{ .Title }} {{ if .Params.category }}-- {{replace .Params.category "-" " " | title }}{{ end }}</a></h3>
+                <h3><a href="{{ .RelPermalink }}">&#187; <time>{{ .PublishDate.Format "01/02/06" }}</time>: {{ .Title }} {{ if .Params.category }}-- {{replace .Params.category "-" " " | title }}{{ end }}</a></h3>
               {{ end }}
               </article>     
             </div>
