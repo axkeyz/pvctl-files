@@ -6,6 +6,8 @@ theme = "niello"
 
 disablePathToLower = true
 
+disableKinds = ['categories']
+
 [taxonomies]
     tag = 'tags'
     translator = 'translator'
