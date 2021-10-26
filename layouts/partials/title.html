@@ -2,6 +2,7 @@
     {{- if eq .IsHome true -}}
         {{ .Site.Title }}
     {{- else -}}
+        {{if in .Title "Chapter" }}{{ replace .Params.Category "-" " " | title }}:{{ end }}
         {{ .Title | title }} - {{ .Site.Title }}
     {{- end -}}
 </title>
