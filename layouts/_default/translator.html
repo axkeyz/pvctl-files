@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+{{ partial "head.html" . }}
+
+<body>
+  {{ partial "ld-check.html" . }}
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        {{ partial "banner.html" . }}
+        <div class="home">
+            <div class="logo">
+                <h1><a href="/">{{.Site.Title}}</a></h1>
+            </div>
+            {{ partial "nav.html" . }}
+            <div>
+                <article>
+                  {{ if .Pages }}
+                  <h2 class="green">{{ .Name }}</h2>
+                  {{ if .Content }}<p>{{ .Content }}</p>{{ end }}
+
+                  <p><h3>Recent Posts</h3>
+                  {{ $pages := where site.RegularPages "Type" "in" "post" }}
+                  {{ $og_name := .Name }}
+                  {{ range first 10 $pages }}
+                    {{ if in .Params.poster $og_name }}
+                        <a class="green-link" href="{{ .RelPermalink }}">&#8635; [{{ .PublishDate.Format "02/01/2006" }}] {{ .Title }}</a><br />
+                    {{ end }}
+                  {{ end }}</p>
+                  <h3>Translated Chapters</h3>
+                    {{ range .Pages.ByTitle }}
+                        <a class="green-link" href="{{ .RelPermalink }}">&#187; {{ .Params.Category }} - {{ .Name }}</a><br />
+                    {{ end }}
+                  {{ end }}
+                </article>     
+            </div>
+            <br>
+            <div class="line-dotted"></div>
+            {{ $comments := .Params.comments }}
+            {{- partial "comments.html" (dict "context" . "comments" .Params.comments ) -}}
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "banner.html" . }}
+    </div>
+
+
+  {{ partial "foot.html" . }}
+</body>
+</html>
