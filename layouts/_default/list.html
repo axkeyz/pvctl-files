@@ -22,13 +22,9 @@
                   {{ if .Pages }}
                   <h3>{{ replace (replace (replace (replace .Name "-" " " | title) "Bl" "BL Novels") "Ml" "ML Novels") "Mc" "MC Novels" }}</h3>
                   <ul>
-                    {{ $notnovel := true }}
                     {{ range .Pages.ByTitle }}
                       {{ if not (or ( in .Title "chapter") ( in .Title "Chapter")) }}
                         <li><a class="green-link" href="{{ .RelPermalink }}">{{ replace (replace (replace (replace .Name "-" " " | title) "Bl" "BL") "Ml" "ML") "Mc" "MC" }}</a></li>
-                        {{ $notnovel = false }}
-                      {{ else if $notnovel }}
-                      <li><a class="green-link" href="{{ .RelPermalink }}">{{ replace (replace (replace (replace .Name "-" " " | title) "Bl" "BL") "Ml" "ML") "Mc" "MC" }}</a></li>
                       {{ end }}
                     {{ end }}
                   </ul>

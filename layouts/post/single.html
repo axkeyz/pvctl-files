@@ -21,11 +21,14 @@
                 <article>
                     <h3>{{ .Title }}</h3>
                     <div class="less">
-                        <time>Published: {{ .PublishDate.Format "January 2, 2006" }}</time>
+                        <time>Published {{ .PublishDate.Format "January 2, 2006" }}</time>{{ if .Params.poster }}&nbsp;&nbsp;
+                        |&nbsp;&nbsp;&nbsp;Author(s):
+                        {{ range $index, $element := .Params.poster }}{{ if gt $index 0}}, {{ end }}
+                        <a class="pagelink" href="/translator/{{ $element }}">{{ $element }}</a>{{ end }}{{ end }}
                     </div>
                     <div class="em">{{ .Content | safeHTML }}</div>
                     <br />
-                    {{ range .Params.categories }}
+                    {{ range $index, $element := .Params.categories }}
                     {{ if not (eq . "all") }}
                     <div class="less">
                         <a class="pagelink" href='/novel/{{ . }}' title="See related posts">Back to {{replace . "-" " " | title }}</a>
