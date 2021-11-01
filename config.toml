@@ -16,6 +16,7 @@ disableKinds = ['categories']
     novel = "/novel/:slug/:filename"
     page = "/:filename"
     post = "/post/:filename"
+    raw = "/raw/:slug/:filename"
 
 [params]
     keywords = "novels, bl, chinese translation"

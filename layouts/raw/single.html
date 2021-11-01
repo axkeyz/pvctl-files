@@ -1,0 +1,65 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+{{ partial "head.html" . }}
+{{ $slug := .Params.slug }}
+
+<body>
+    {{ partial "ld-check.html" . }}
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        {{ partial "banner.html" . }}
+        <div class="home">
+            <div class="logo">
+                <h1><a href="/">{{.Site.Title}}</a></h1>
+            </div>
+            {{ partial "nav.html" . }}
+            <div>
+                <article>
+                    <div class="less text-center">
+                        {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}
+                        &nbsp;&nbsp;<a class="pagelink" href='{{ (printf "/raw/%s/" $slug) | urlize }}'>TOC</a>&nbsp;&nbsp;
+                        {{ if .NextInSection }}|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{.NextInSection.Permalink}}">Next</a>{{ end }}
+                    </div>
+                    <br />
+                    <h3>{{ .Title }}{{if .Params.subtitle}}: {{ .Params.subtitle }}{{end}}</h3>                    
+                    <div class="em">{{ replace (replace (replace .Content "<p>" "<div class='paragraph'>") "</p>" "</div>") "<br>" "<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" | safeHTML }}</div>
+                    <br />
+                    <div class="less text-center">
+                        {{ if .PrevInSection }}<a class="pagelink" href="{{.PrevInSection.Permalink}}">Previous</a>&nbsp;&nbsp;&nbsp;|{{ end }}
+                        &nbsp;&nbsp;<a class="pagelink" href='{{ (printf "/raw/%s/" $slug) | urlize }}'>TOC</a>&nbsp;&nbsp;
+                        {{ if .NextInSection }}|&nbsp;&nbsp;&nbsp;<a class="pagelink" href="{{.NextInSection.Permalink}}">Next</a>{{ end }}
+                    </div>
+                    <br /><br />
+                    <div class="less">
+                        <time>Published: {{ .PublishDate.Format "January 2, 2006" }}</time>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Word Count: {{ .WordCount }}
+                    </div>
+                    {{ if isset .Params "category" -}}
+                    <div class="less">Novel: 
+                            <a class="pagelink" href='{{ (printf "/raw/%s/" $slug) | urlize }}' title="Index: {{ .Params.category }}">{{ .Params.category }}</a>&nbsp;&nbsp;
+                    </div>
+                    {{- end }}
+                    {{ if isset .Params "tags" -}}
+                        <div class="less">Tags: 
+                        {{ range $index, $name := sort .Params.tags -}}
+                            <a class="pagelink" href='{{ (printf "/tags/%s/" $name) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
+                        {{- end}}
+                        </div>
+                    {{- end }}
+                </article>
+            </div>
+            <div class="line-dotted"></div>
+            {{- partial "comments.html" (dict "context" . "comments" .Params.comments ) -}}
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "banner.html" . }}
+    </div>
+
+
+  {{ partial "foot.html" . }}
+</body>
+</html>

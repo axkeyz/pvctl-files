@@ -1,0 +1,114 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+{{ partial "head.html" . }}
+
+<body>
+    {{ partial "ld-check.html" . }}
+    {{ `<!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->` | safeHTML }}
+
+  <!-- Add your site or application content here -->
+    <div class="flex-column">
+        {{ partial "banner.html" . }}
+        <div class="home">
+            <div class="logo">
+                <h1><a href="/">{{.Site.Title}}</a></h1>
+            </div>
+            {{ partial "nav.html" . }}
+            <div>
+                {{ if .RegularPages }}
+                    <p><h2 class="green">{{ .Title }} &#8212; Table of Contents</h2>
+                    {{ if .Params.Summary }}
+                        <h3>Summary</h3>
+                        {{ .Params.Summary }}
+                    <br />
+                    {{ end }}</p>
+
+                    {{ if .Params.original }}
+                    {{- $param := $.Params.original -}}
+                        <p>
+                        {{ range $param }}
+                            {{ range $key, $value := . }}
+                            <span class="green">{{ title  $key }}:</span> {{ $value | markdownify }}<br />
+                            {{ end }}
+                        {{ end }}
+                        </p>
+                    {{ end }}
+                    <p><h3>Contents</h3>
+                    {{ range .RegularPages.ByTitle }}
+                        <a class="green-link" href="{{ .RelPermalink }}">&#187; Chapter {{ .File.BaseFileName }}
+                            {{ if .Params.subtitle }}
+                                : {{ .Params.subtitle }}
+                            {{ end }}
+                        </a><br />
+                    {{ end }}
+                    </p>
+                    {{ $pages := where site.RegularPages "Type" "in" "post" }}
+                    {{ $og_category := .Params.slug }}
+                    <p><h3>Related Posts & Updates</h3>
+                    {{ range (.Paginate $pages 20).Pages.ByDate.Reverse }}
+                        {{ if or (in .Params.categories $og_category) (in .Params.categories "all")}}
+                            <a class="green-link" href="{{ .RelPermalink }}">&#8635; {{ .Title }}</a><br />
+                        {{ end }}
+                    {{ end }}
+                    </p>
+                    {{ if isset .Params "notes" -}}
+                        <p><h3>Notes</h3>
+                        <ul>{{ range $index, $name := sort .Params.notes -}}
+                            {{ range $key, $value := . }}
+                                {{ if eq $key "warnings"}}
+                                    <li><span class="green">Warnings</span><ul>
+                                    {{ range . }}
+                                        {{ range $warning_k, $warning_v := .}}
+                                        <li>{{ title  $warning_k }}: {{ $warning_v }}</li>
+                                        {{ end }}
+                                    {{ end }}
+                                    </ul></li>
+                                {{ else }}
+                                <li><span class="green">{{ title  $key }}:</span> {{ $value }}</li>
+                                {{ end }}
+                            {{ end }}
+                        {{- end}}
+                        </ul></p>
+                    {{ end }}
+                    {{ if isset .Params "tags" -}}
+                        <br/><div class="less">Tags: 
+                        {{ range $index, $name := sort .Params.tags -}}
+                            <a class="pagelink" href='{{ (printf "/tags/%s/" $name) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
+                        {{- end}}
+                        </div>
+                    {{- end }}
+                {{ else }}
+                    <h2 class="green">List of All Raws</h2>
+                    {{ if in .Permalink "raw" }}
+                        {{- range .Pages -}}
+                            <article>
+                                <a class="green-link" href="/raw/{{.Params.slug}}">&#8859; {{ .Title }}</a>
+                                <p>{{ .Params.Summary }}
+                                    {{ if isset .Params "tags" -}}
+                                        <div class="less align-right">Tags: &nbsp;
+                                        {{ range $index, $name := sort .Params.tags -}}
+                                            <a class="pagelink" href='{{ (printf "/tags/%s/" $name) | urlize }}' title="Index: {{$name | markdownify }}">{{$name | markdownify}}</a>&nbsp;&nbsp;
+                                        {{- end}}
+                                        </div>
+                                    {{- end }}
+                                </p>
+                            </article>
+                        {{- end -}}
+                    {{- end -}}
+                {{ end }}
+            </div>
+            <br>
+            <div class="line-dotted"></div>
+            {{- partial "comments.html" -}}
+            {{ partial "footer.html" . }}
+        </div>
+        {{ partial "banner.html" . }}
+    </div>
+
+
+  {{ partial "foot.html" . }}
+</body>
+</html>
